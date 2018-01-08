@@ -1,0 +1,49 @@
+console.log('script ready');
+
+$(document).ready(()=> {
+  $('body').scroll(() => {
+    var top = $('.hidden-cover').offset().top;
+    console.log(top);
+    changeBg(top);
+  });
+});
+
+function changeBg(cheezballz) {
+  cheezballz = cheezballz*-1;
+  if (cheezballz >= 100 && cheezballz < 200) {
+    $('.bg').css('background', "url('2.gif')");
+  }
+  else if (cheezballz > 200 && cheezballz < 300) {
+    $('.bg').css('background', "url('3.gif')");
+  }
+  else if (cheezballz > 300 && cheezballz < 400) {
+    $('.bg').css('background', "url('4.gif')");
+  }
+  else if (cheezballz > 400 && cheezballz <= 500) {
+    $('.bg').css('background', "url('5.gif')");
+  }
+  else if (cheezballz > 500 && cheezballz <= 600) {
+    $('.bg').css('background', "url('6.gif')");
+  }
+  else if (cheezballz > 600 && cheezballz <= 700) {
+    $('.bg').css('background', "url('7.gif')");
+  }
+  else if (cheezballz > 700 && cheezballz <= 800) {
+    $('.bg').css('background', "url('8.gif')");
+  }
+  else if (cheezballz > 800 && cheezballz <= 900) {
+    $('.bg').css('background', "url('9.gif')");
+  }
+  else if (cheezballz > 900 && cheezballz <= 1000) {
+    $('.bg').css('background', "url('10.gif')");
+  }
+  else if (cheezballz > 1000 && cheezballz <= 10000) {
+    $('.bg').css('background', "url('11.gif')");
+  }
+  else {
+    $('.bg').css('background', "url('1.gif')");
+  }
+  $('.bg').css('background-size', "cover");
+  console.log('number is: '+cheezballz);
+  console.log('color is: '+$('.bg')[0].style.backgroundColor)
+}
